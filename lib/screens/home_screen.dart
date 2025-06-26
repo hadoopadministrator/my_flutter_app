@@ -26,6 +26,15 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Center(
+        /*
+  Day 1 Challenge: Basic Container UI
+
+  Create a centered square Container with:
+  - height: 200
+  - width: 200
+  - background color: blue
+  - Text widget inside saying: "Hello Flutter"
+*/
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
