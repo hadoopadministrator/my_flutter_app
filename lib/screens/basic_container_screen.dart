@@ -67,31 +67,29 @@ class _BasicContainerScreenState extends State<BasicContainerScreen> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 20, bottom: 20, left: 20),
-              child: SizedBox(
-                width: width * 1,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: height * 0.02),
-                    backgroundColor: Colors.black,
-                    elevation: 10,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VerticalBoxScreen(),
-                      ),
-                    );
-                  },
-                  child: Text(
-                    "Next Day",
-                    style: TextStyle(
-                      fontSize: width * 0.045,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+            Container(
+              margin: EdgeInsets.only(right: 20, bottom: 20, left: 20),
+              width: width * 1,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(vertical: height * 0.02),
+                  backgroundColor: Colors.black,
+                  elevation: 10,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => VerticalBoxScreen(),
                     ),
+                  );
+                },
+                child: Text(
+                  "Next Day",
+                  style: TextStyle(
+                    fontSize: width * 0.045,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),
