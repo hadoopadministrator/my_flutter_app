@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/basic_container_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        // This is the theme of your application.
-      ),
-      home: const MyHomePage(title: 'Flutter Demo App'),
+      // debugShowCheckedModeBanner: true,
+      home: const BasicContainerScreen(),
     );
   }
 }
