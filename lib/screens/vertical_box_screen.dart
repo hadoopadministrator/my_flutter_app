@@ -4,7 +4,7 @@ import 'package:my_app/screens/horizontal_icon_screen.dart';
 class VerticalBoxScreen extends StatefulWidget {
   const VerticalBoxScreen({super.key});
   /*
-        Day 2 Challenge: Vertical Layout using Column
+        Day 2 Challenge (26/06/25): Vertical Layout using Column
 
         Build a screen with a Column that has:
         - 3 square boxes stacked vertically
@@ -29,7 +29,7 @@ class _VerticalBoxScreenState extends State<VerticalBoxScreen> {
           backgroundColor: Colors.black,
           centerTitle: true,
           title: Text(
-            "Day 2: Vertical Box Layout",
+            "Day 2 - Vertical Box Layout",
             style: TextStyle(
               color: Colors.white,
               fontSize: width * 0.05,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/screens/styled_text_screen.dart';
 
 class HorizontalIconScreen extends StatefulWidget {
   const HorizontalIconScreen({super.key});
 
   /*
-      Day 3 Challenge: Horizontal Layout using Row
+      Day 3 Challenge (27/06/25): Horizontal Layout using Row
 
       Build a screen with a Row that contains:
       - 3 icons spaced evenly using MainAxisAlignment.spaceAround
@@ -95,12 +96,10 @@ class _HorizontalIconScreenState extends State<HorizontalIconScreen> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => ,
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => StyledTextScreen()),
+                  );
                 },
                 child: Text(
                   "Next Day",

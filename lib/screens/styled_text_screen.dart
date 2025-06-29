@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/vertical_box_screen.dart';
 
-class BasicContainerScreen extends StatefulWidget {
-  const BasicContainerScreen({super.key});
-
+class StyledTextScreen extends StatefulWidget {
+  const StyledTextScreen({super.key});
   /*
-        Day 1 Challenge (25/06/25): Basic Container UI
-      
-        Create a centered square Container with:
-        - height: 200
-        - width: 200
-        - background color: blue
-        - Text widget inside saying: "Hello Flutter"
-  */
+  Day 4 Challenge (28/06/25): Styled Text
+
+  Build a screen that displays:
+  - A Text widget centered on the screen
+  - Apply the following custom styling to the Text:
+    - Font size: 24
+    - Font weight: Bold
+    - Text color: Red
+  - Wrap the Text widget with Padding to show space around the text
+*/
 
   @override
-  State<BasicContainerScreen> createState() => _BasicContainerScreenState();
+  State<StyledTextScreen> createState() => _StyledTextScreenState();
 }
 
-class _BasicContainerScreenState extends State<BasicContainerScreen> {
+class _StyledTextScreenState extends State<StyledTextScreen> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
-
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: Colors.black,
           centerTitle: true,
           title: Text(
-            "Day 1 - Basic Container",
+            "Day 4 - Styled Text",
             style: TextStyle(
               color: Colors.white,
               fontSize: width * 0.05,
@@ -43,27 +43,19 @@ class _BasicContainerScreenState extends State<BasicContainerScreen> {
           children: [
             SizedBox(),
             Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.blue,
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromRGBO(0, 0, 255, 0.4),
-                    blurRadius: 12,
-                    spreadRadius: 2,
-                    offset: Offset(4, 4),
-                  ),
-                ],
-              ),
-              height: height * 0.25,
-              width: width * 0.5,
-              alignment: Alignment.center,
-              child: Text(
-                "Hello Flutter",
-                style: TextStyle(
+              color: Colors.black,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
                   color: Colors.white,
-                  fontSize: width * 0.045,
-                  fontWeight: FontWeight.bold,
+                  child: Text(
+                    "This is styled text!",
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: width * 0.08,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -77,12 +69,12 @@ class _BasicContainerScreenState extends State<BasicContainerScreen> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => VerticalBoxScreen(),
-                    ),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => VerticalBoxScreen(),
+                  //   ),
+                  // );
                 },
                 child: Text(
                   "Next Day",
