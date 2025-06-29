@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/styled_text_screen.dart';
 
-class HorizontalIconScreen extends StatefulWidget {
+class HorizontalIconScreen extends StatelessWidget {
   const HorizontalIconScreen({super.key});
 
   /*
@@ -12,11 +12,6 @@ class HorizontalIconScreen extends StatefulWidget {
       - Use icons such as: Home, Call, and Email
   */
 
-  @override
-  State<HorizontalIconScreen> createState() => _HorizontalIconScreenState();
-}
-
-class _HorizontalIconScreenState extends State<HorizontalIconScreen> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;

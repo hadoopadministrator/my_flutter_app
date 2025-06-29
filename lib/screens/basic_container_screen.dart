@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/vertical_box_screen.dart';
 
-class BasicContainerScreen extends StatefulWidget {
+class BasicContainerScreen extends StatelessWidget {
   const BasicContainerScreen({super.key});
 
   /*
@@ -14,11 +14,6 @@ class BasicContainerScreen extends StatefulWidget {
         - Text widget inside saying: "Hello Flutter"
   */
 
-  @override
-  State<BasicContainerScreen> createState() => _BasicContainerScreenState();
-}
-
-class _BasicContainerScreenState extends State<BasicContainerScreen> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/horizontal_icon_screen.dart';
 
-class VerticalBoxScreen extends StatefulWidget {
+class VerticalBoxScreen extends StatelessWidget {
   const VerticalBoxScreen({super.key});
   /*
         Day 2 Challenge (26/06/25): Vertical Layout using Column
@@ -12,11 +12,6 @@ class VerticalBoxScreen extends StatefulWidget {
         - Each box contains a Text widget with labels: "Box 1", "Box 2", "Box 3"
   */
 
-  @override
-  State<VerticalBoxScreen> createState() => _VerticalBoxScreenState();
-}
-
-class _VerticalBoxScreenState extends State<VerticalBoxScreen> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
