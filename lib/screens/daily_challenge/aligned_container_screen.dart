@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/custom_widgets/custom_appbar.dart';
 
 class AlignedContainerScreen extends StatelessWidget {
   const AlignedContainerScreen({super.key});
@@ -15,18 +16,9 @@ class AlignedContainerScreen extends StatelessWidget {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
-        backgroundColor: Colors.black,
-        centerTitle: true,
-        title: Text(
-          "Day 5 - Alignment, Padding & Margin",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: width * 0.04,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+      appBar: CustomAppBar(
+        title: "Day 5 - Alignment, Padding & Margin",
+        fontSize: width * 0.045,
       ),
       body: Column(
         children: [

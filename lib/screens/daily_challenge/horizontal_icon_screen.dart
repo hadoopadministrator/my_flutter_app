@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/styled_text_screen.dart';
+import 'package:my_app/custom_widgets/custom_appbar.dart';
+import 'package:my_app/screens/daily_challenge/styled_text_screen.dart';
 
 class HorizontalIconScreen extends StatelessWidget {
   const HorizontalIconScreen({super.key});
@@ -19,18 +20,9 @@ class HorizontalIconScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.white),
-          backgroundColor: Colors.black,
-          centerTitle: true,
-          title: Text(
-            "Day 3 - Horizontal Icon Layout",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: width * 0.05,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+        appBar: CustomAppBar(
+          title: "Day 3 - Horizontal Icon Layout",
+          fontSize: width * 0.05,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

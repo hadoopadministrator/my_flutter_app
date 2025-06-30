@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/vertical_box_screen.dart';
+import 'package:my_app/screens/daily_challenge/vertical_box_screen.dart';
+
+import '../../custom_widgets/custom_appbar.dart';
 
 class BasicContainerScreen extends StatelessWidget {
   const BasicContainerScreen({super.key});
@@ -21,17 +23,9 @@ class BasicContainerScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          centerTitle: true,
-          title: Text(
-            "Day 1 - Basic Container",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: width * 0.05,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+        appBar: CustomAppBar(
+          title: "Day 1 - Basic Container",
+          fontSize: width * 0.05,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

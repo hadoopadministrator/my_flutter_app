@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/aligned_container_screen.dart';
+import 'package:my_app/custom_widgets/custom_appbar.dart';
+import 'package:my_app/screens/daily_challenge/aligned_container_screen.dart';
 
 class StyledTextScreen extends StatelessWidget {
   const StyledTextScreen({super.key});
@@ -20,18 +21,9 @@ class StyledTextScreen extends StatelessWidget {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
-        backgroundColor: Colors.black,
-        centerTitle: true,
-        title: Text(
-          "Day 4 - Styled Text",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: width * 0.05,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+      appBar: CustomAppBar(
+        title: "Day 4 - Styled Text",
+        fontSize: width * 0.05,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
