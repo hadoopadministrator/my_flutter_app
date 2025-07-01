@@ -15,18 +15,16 @@ class ProfileCardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
-    final height = MediaQuery.sizeOf(context).height;
-    return SafeArea(
-      child: Scaffold(
-        appBar: CustomAppBar(
-          title: "Day 6 - Profile Card",
-          fontSize: width * 0.05,
-        ),
-        body: Center(
+    return Scaffold(
+      appBar: CustomAppBar(
+        title: "Day 6 - Profile Card",
+        fontSize: width * 0.05,
+      ),
+      body: SafeArea(
+        child: Center(
           child: Container(
-            height: height * 0.5,
-            width: width * 0.8,
-            padding: EdgeInsets.all(32),
+            padding: EdgeInsets.all(24),
+            margin: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               color: Colors.grey[100],
@@ -40,16 +38,12 @@ class ProfileCardScreen extends StatelessWidget {
             ),
 
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 CircleAvatar(
-                  backgroundColor: Colors.grey[300],
+                  backgroundColor: Colors.white,
                   radius: 70,
-                  child: Icon(
-                    Icons.person,
-                    size: width * 0.25,
-                    color: Colors.black87,
-                  ),
+                  child: FlutterLogo(size: 90),
                 ),
                 Text(
                   "Ahmad Shaikh",

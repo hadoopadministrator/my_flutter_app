@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/daily_challenge/aligned_container_screen.dart';
 import 'package:my_app/screens/daily_challenge/basic_container_screen.dart';
+import 'package:my_app/screens/daily_challenge/business_card_screen.dart';
 import 'package:my_app/screens/daily_challenge/horizontal_icon_screen.dart';
 import 'package:my_app/screens/daily_challenge/profile_card_screen.dart';
 import 'package:my_app/screens/daily_challenge/styled_text_screen.dart';
@@ -91,6 +92,17 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ProfileCardScreen()),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day7 Challenge",
+              width: width,
+              height: height,
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BusinessCardScreen()),
                 );
               },
             ),

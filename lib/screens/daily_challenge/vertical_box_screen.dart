@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/custom_widgets/custom_appbar.dart';
-import 'package:my_app/screens/daily_challenge/horizontal_icon_screen.dart';
 
 class VerticalBoxScreen extends StatelessWidget {
   const VerticalBoxScreen({super.key});
@@ -18,119 +17,96 @@ class VerticalBoxScreen extends StatelessWidget {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: CustomAppBar(
-          title: "Day 2 - Vertical Box Layout",
-          fontSize: width * 0.05,
-        ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.red,
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromRGBO(255, 0, 0, 0.4),
-                    blurRadius: 12,
-                    spreadRadius: 2,
-                    offset: Offset(4, 4),
+    return Scaffold(
+      appBar: CustomAppBar(
+        title: "Day 2 - Vertical Box Layout",
+        fontSize: width * 0.05,
+      ),
+      body: SafeArea(
+        child: Center(
+          child: Container(
+            margin: EdgeInsets.symmetric(vertical: 20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(255, 0, 0, 0.4),
+                        blurRadius: 12,
+                        spreadRadius: 2,
+                        offset: Offset(4, 4),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              height: height * 0.2,
-              width: width * 0.4,
-              alignment: Alignment.center,
-              child: Text(
-                "Red Box",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: width * 0.045,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.green,
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromRGBO(0, 255, 0, 0.4),
-                    blurRadius: 12,
-                    spreadRadius: 2,
-                    offset: Offset(4, 4),
-                  ),
-                ],
-              ),
-              height: height * 0.2,
-              width: width * 0.4,
-              alignment: Alignment.center,
-              child: Text(
-                "Green Box",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: width * 0.045,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.blue,
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromRGBO(0, 0, 255, 0.4),
-                    blurRadius: 12,
-                    spreadRadius: 2,
-                    offset: Offset(4, 4),
-                  ),
-                ],
-              ),
-              height: height * 0.2,
-              width: width * 0.4,
-              alignment: Alignment.center,
-              child: Text(
-                "Blue Box",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: width * 0.045,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(right: 20, bottom: 20, left: 20),
-              width: width * 1,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: height * 0.02),
-                  backgroundColor: Colors.black,
-                  elevation: 10,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => HorizontalIconScreen(),
+                  height: height * 0.2,
+                  width: width * 0.4,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Red Box",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: width * 0.045,
+                      fontWeight: FontWeight.bold,
                     ),
-                  );
-                },
-                child: Text(
-                  "Next Day",
-                  style: TextStyle(
-                    fontSize: width * 0.045,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
                   ),
                 ),
-              ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.green,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(0, 255, 0, 0.4),
+                        blurRadius: 12,
+                        spreadRadius: 2,
+                        offset: Offset(4, 4),
+                      ),
+                    ],
+                  ),
+                  height: height * 0.2,
+                  width: width * 0.4,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Green Box",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: width * 0.045,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blue,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(0, 0, 255, 0.4),
+                        blurRadius: 12,
+                        spreadRadius: 2,
+                        offset: Offset(4, 4),
+                      ),
+                    ],
+                  ),
+                  height: height * 0.2,
+                  width: width * 0.4,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Blue Box",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: width * 0.045,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

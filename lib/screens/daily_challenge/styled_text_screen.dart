@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/custom_widgets/custom_appbar.dart';
-import 'package:my_app/screens/daily_challenge/aligned_container_screen.dart';
 
 class StyledTextScreen extends StatelessWidget {
   const StyledTextScreen({super.key});
@@ -19,61 +18,27 @@ class StyledTextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
-    final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: CustomAppBar(
         title: "Day 4 - Styled Text",
         fontSize: width * 0.05,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(),
-          Container(
-            color: Colors.black,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Container(
-                color: Colors.white,
-                child: Text(
-                  "This is styled text!",
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: width * 0.08,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+      body: SafeArea(
+        child: Center(
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            margin: const EdgeInsets.all(16.0),
+            color: Colors.white,
+            child: Text(
+              "This is styled text!",
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: width * 0.08,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(right: 20, bottom: 20, left: 20),
-            width: width * 1,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: height * 0.02),
-                backgroundColor: Colors.black,
-                elevation: 10,
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => AlignedContainerScreen(),
-                  ),
-                );
-              },
-              child: Text(
-                "Next Day",
-                style: TextStyle(
-                  fontSize: width * 0.045,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
