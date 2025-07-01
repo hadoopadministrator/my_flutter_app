@@ -18,11 +18,11 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(right: 20, bottom: 20, left: 20),
-      width: width * 1,
+      width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.symmetric(vertical: height * 0.02),
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.grey,
           elevation: 10,
         ),
         onPressed: onPressede,

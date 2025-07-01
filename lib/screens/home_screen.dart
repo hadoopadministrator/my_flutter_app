@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/screens/daily_challenge/aligned_container_screen.dart';
 import 'package:my_app/screens/daily_challenge/basic_container_screen.dart';
 import 'package:my_app/screens/daily_challenge/horizontal_icon_screen.dart';
+import 'package:my_app/screens/daily_challenge/profile_card_screen.dart';
 import 'package:my_app/screens/daily_challenge/styled_text_screen.dart';
 import 'package:my_app/screens/daily_challenge/vertical_box_screen.dart';
 
@@ -19,6 +20,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         appBar: CustomAppBar(title: "Home Page", fontSize: width * 0.05),
         body: ListView(
+          padding: EdgeInsets.only(left: 20, top: 20, right: 20),
           children: [
             CustomButton(
               days: "Day1 Challenge",
@@ -78,6 +80,17 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => AlignedContainerScreen(),
                   ),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day6 Challenge",
+              width: width,
+              height: height,
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfileCardScreen()),
                 );
               },
             ),
