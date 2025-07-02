@@ -3,6 +3,7 @@ import 'package:my_app/screens/daily_challenges/aligned_container_screen.dart';
 import 'package:my_app/screens/daily_challenges/basic_container_screen.dart';
 import 'package:my_app/screens/daily_challenges/business_card_screen.dart';
 import 'package:my_app/screens/daily_challenges/horizontal_icon_screen.dart';
+import 'package:my_app/screens/daily_challenges/login_screen.dart';
 import 'package:my_app/screens/daily_challenges/profile_card_screen.dart';
 import 'package:my_app/screens/daily_challenges/styled_text_screen.dart';
 import 'package:my_app/screens/daily_challenges/vertical_box_screen.dart';
@@ -101,6 +102,17 @@ class DailyChallengeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => BusinessCardScreen()),
+              );
+            },
+          ),
+          CustomButton(
+            days: "Day8 Challenge",
+            width: width,
+            height: height,
+            onPressede: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginScreen()),
               );
             },
           ),

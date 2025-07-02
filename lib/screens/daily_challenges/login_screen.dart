@@ -21,34 +21,29 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 16),
               TextFormField(
                 decoration: const InputDecoration(
-                  hintText: 'example@gmail.com',
                   labelText: 'email',
+                  hintText: 'example@gmail.com',
+                  hintStyle: TextStyle(color: Colors.grey),
                   border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.email),
                 ),
-
-                onChanged: (value) {},
               ),
               const SizedBox(height: 16),
               TextFormField(
                 decoration: const InputDecoration(
-                  hintText: 'example@565',
                   labelText: 'password',
-
+                  hintText: '••••••••',
+                  hintStyle: TextStyle(color: Colors.grey),
                   border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.password),
                 ),
-                onChanged: (value) {},
               ),
               const SizedBox(height: 16),
               CustomButton(
                 width: width,
                 height: height,
                 days: "Login",
-                onPressede: () {
-                  //   Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(builder: (context) => HomeScreen()),
-                  //   );
-                },
+                onPressede: () {},
               ),
             ],
           ),
