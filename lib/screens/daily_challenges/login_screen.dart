@@ -33,6 +33,7 @@ class LoginScreen extends StatelessWidget {
                 decoration: const InputDecoration(
                   hintText: 'example@565',
                   labelText: 'password',
+
                   border: OutlineInputBorder(),
                 ),
                 onChanged: (value) {},

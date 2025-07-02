@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:my_app/custom_widgets/custom_appbar.dart';
 import 'package:my_app/custom_widgets/custom_button.dart';
 
-class AllInputTypesForm extends StatefulWidget {
-  const AllInputTypesForm({super.key});
+class AllInputTypesScreen extends StatefulWidget {
+  const AllInputTypesScreen({super.key});
 
   @override
-  State<AllInputTypesForm> createState() => _AllInputTypesFormState();
+  State<AllInputTypesScreen> createState() => _AllInputTypesScreenState();
 }
 
-class _AllInputTypesFormState extends State<AllInputTypesForm> {
+class _AllInputTypesScreenState extends State<AllInputTypesScreen> {
   String gender = 'Male';
   bool isSubscribed = false;
   bool notifications = false;
