@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/screens/all_input_types_form.dart';
 import 'package:my_app/screens/daily_challenge/aligned_container_screen.dart';
 import 'package:my_app/screens/daily_challenge/basic_container_screen.dart';
 import 'package:my_app/screens/daily_challenge/business_card_screen.dart';
@@ -17,12 +18,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
-    return SafeArea(
-      child: Scaffold(
-        appBar: CustomAppBar(title: "Home Page", fontSize: width * 0.05),
-        body: ListView(
-          padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+    return Scaffold(
+      appBar: CustomAppBar(title: "Home Page", fontSize: width * 0.05),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+        child: Column(
           children: [
+            CustomButton(
+              width: width,
+              height: height,
+              days: "AllInputTypesForm",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AllInputTypesForm()),
+                );
+              },
+            ),
             CustomButton(
               days: "Day1 Challenge",
               width: width,
