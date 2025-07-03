@@ -17,7 +17,6 @@ class DailyChallengeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
-    final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: CustomAppBar(
         title: "DailyChallengeScreen",
@@ -28,8 +27,7 @@ class DailyChallengeScreen extends StatelessWidget {
         children: [
           CustomButton(
             days: "Day1 Challenge",
-            width: width,
-            height: height,
+
             onPressede: () {
               Navigator.push(
                 context,
@@ -39,8 +37,7 @@ class DailyChallengeScreen extends StatelessWidget {
           ),
           CustomButton(
             days: "Day2 Challenge",
-            width: width,
-            height: height,
+
             onPressede: () {
               Navigator.push(
                 context,
@@ -50,8 +47,7 @@ class DailyChallengeScreen extends StatelessWidget {
           ),
           CustomButton(
             days: "Day3 Challenge",
-            width: width,
-            height: height,
+
             onPressede: () {
               Navigator.push(
                 context,
@@ -61,8 +57,7 @@ class DailyChallengeScreen extends StatelessWidget {
           ),
           CustomButton(
             days: "Day4 Challenge",
-            width: width,
-            height: height,
+
             onPressede: () {
               Navigator.push(
                 context,
@@ -72,8 +67,7 @@ class DailyChallengeScreen extends StatelessWidget {
           ),
           CustomButton(
             days: "Day5 Challenge",
-            width: width,
-            height: height,
+
             onPressede: () {
               Navigator.push(
                 context,
@@ -85,8 +79,7 @@ class DailyChallengeScreen extends StatelessWidget {
           ),
           CustomButton(
             days: "Day6 Challenge",
-            width: width,
-            height: height,
+
             onPressede: () {
               Navigator.push(
                 context,
@@ -96,8 +89,7 @@ class DailyChallengeScreen extends StatelessWidget {
           ),
           CustomButton(
             days: "Day7 Challenge",
-            width: width,
-            height: height,
+
             onPressede: () {
               Navigator.push(
                 context,
@@ -107,13 +99,18 @@ class DailyChallengeScreen extends StatelessWidget {
           ),
           CustomButton(
             days: "Day8 Challenge",
-            width: width,
-            height: height,
+
             onPressede: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => LoginScreen()),
               );
+            },
+          ),
+          CustomButton(
+            days: "Day9 Challenge",
+            onPressede: () {
+              Navigator.pushNamed(context, 'StyleButtonScreen');
             },
           ),
         ],

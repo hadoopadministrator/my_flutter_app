@@ -28,8 +28,6 @@ class _AllInputTypesScreenState extends State<AllInputTypesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.sizeOf(context).width;
-    final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: CustomAppBar(title: "All Input Types Form", fontSize: 20),
       body: SafeArea(
@@ -141,8 +139,6 @@ class _AllInputTypesScreenState extends State<AllInputTypesScreen> {
               ),
               const SizedBox(height: 16),
               CustomButton(
-                width: width,
-                height: height,
                 days: _selectedDate == null
                     ? 'Sselecte Date'
                     : '${_selectedDate!.day}/${_selectedDate!.month}/${_selectedDate!.year}',
@@ -162,8 +158,6 @@ class _AllInputTypesScreenState extends State<AllInputTypesScreen> {
               ),
               const SizedBox(height: 16),
               CustomButton(
-                width: width,
-                height: height,
                 days: _selectedTime == null
                     ? 'Selecte Time'
                     : '${_selectedTime!.hour}:${_selectedTime!.minute}',

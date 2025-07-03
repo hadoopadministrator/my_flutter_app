@@ -14,8 +14,6 @@ class _PassingDataScreenState extends State<PassingDataScreen> {
   String age = '';
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.sizeOf(context).width;
-    final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: CustomAppBar(title: "PassingDataScreen", fontSize: 20),
       body: SafeArea(
@@ -55,8 +53,6 @@ class _PassingDataScreenState extends State<PassingDataScreen> {
               ),
               const SizedBox(height: 16),
               CustomButton(
-                width: width,
-                height: height,
                 days: "Submit",
                 onPressede: () {
                   Navigator.pushNamed(

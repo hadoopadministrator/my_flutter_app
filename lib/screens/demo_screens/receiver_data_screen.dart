@@ -16,8 +16,6 @@ class _ReceiverDataScreenState extends State<ReceiverDataScreen> {
     final args =
         ModalRoute.of(context)!.settings.arguments as Map<String, String>;
 
-    final width = MediaQuery.sizeOf(context).width;
-    final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: CustomAppBar(title: "ReceiverDataScreen", fontSize: 20),
       body: SafeArea(
@@ -47,8 +45,6 @@ class _ReceiverDataScreenState extends State<ReceiverDataScreen> {
               ),
               const SizedBox(height: 16),
               CustomButton(
-                width: width,
-                height: height,
                 days: "Back",
                 onPressede: () {
                   Navigator.pushAndRemoveUntil(

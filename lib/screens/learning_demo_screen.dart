@@ -9,7 +9,6 @@ class LearningDemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
-    final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: CustomAppBar(title: "LearningDemoScreen", fontSize: width * 0.05),
       body: SafeArea(
@@ -17,8 +16,6 @@ class LearningDemoScreen extends StatelessWidget {
           padding: EdgeInsets.all(16),
           children: [
             CustomButton(
-              width: width,
-              height: height,
               days: "AllInputTypesForm",
               onPressede: () {
                 Navigator.push(
@@ -30,8 +27,6 @@ class LearningDemoScreen extends StatelessWidget {
               },
             ),
             CustomButton(
-              width: width,
-              height: height,
               days: "PassingDataScreen",
               onPressede: () {
                 Navigator.pushNamed(context, 'PassingDataScreen');

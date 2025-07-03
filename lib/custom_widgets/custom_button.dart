@@ -3,34 +3,35 @@ import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
-    required this.width,
-    required this.height,
     required this.days,
     required this.onPressede,
+    this.padding,
+    this.margin,
   });
 
-  final double width;
-  final double height;
   final String days;
   final Function() onPressede;
-
+  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(right: 20, bottom: 20, left: 20),
-      width: double.infinity,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: height * 0.02),
-          backgroundColor: Colors.grey,
-          elevation: 10,
+    return InkWell(
+      onTap: onPressede,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.purple,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(width: 0.5),
         ),
-        onPressed: onPressede,
+        margin: margin ?? EdgeInsets.all(10),
+        padding: padding ?? EdgeInsets.symmetric(vertical: 10),
+        width: double.infinity,
+        alignment: Alignment.center,
         child: Text(
           days,
           style: TextStyle(
-            fontSize: width * 0.045,
-            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
             color: Colors.white,
           ),
         ),

@@ -8,8 +8,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.sizeOf(context).width;
-    final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: CustomAppBar(title: "Login Screen", fontSize: 20),
       body: SafeArea(
@@ -39,12 +37,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              CustomButton(
-                width: width,
-                height: height,
-                days: "Login",
-                onPressede: () {},
-              ),
+              CustomButton(days: "Login", onPressede: () {}),
             ],
           ),
         ),
