@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/screens/daily_challenge_screen.dart';
+import 'package:my_app/screens/demo_screens/passing_data_screen.dart';
+import 'package:my_app/screens/demo_screens/receiver_data_screen.dart';
+import 'package:my_app/screens/learning_demo_screen.dart';
 import 'package:my_app/screens/main_screen.dart';
 
 void main() {
@@ -13,7 +17,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // debugShowCheckedModeBanner: true,
-      home: const MainScreen(),
+      // home: const MainScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MainScreen(),
+        'DailyChallengeScreen': (context) => const DailyChallengeScreen(),
+        'LearningDemoScreen': (context) => const LearningDemoScreen(),
+        'PassingDataScreen': (context) => const PassingDataScreen(),
+        'ReceiverDataScreen': (context) => ReceiverDataScreen(),
+      },
     );
   }
 }

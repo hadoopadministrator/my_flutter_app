@@ -29,6 +29,14 @@ class LearningDemoScreen extends StatelessWidget {
                 );
               },
             ),
+            CustomButton(
+              width: width,
+              height: height,
+              days: "PassingDataScreen",
+              onPressede: () {
+                Navigator.pushNamed(context, 'PassingDataScreen');
+              },
+            ),
           ],
         ),
       ),

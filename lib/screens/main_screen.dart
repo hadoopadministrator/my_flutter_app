@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/custom_widgets/custom_button.dart';
-import 'package:my_app/screens/daily_challenge_screen.dart';
-import 'package:my_app/screens/learning_demo_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -18,25 +16,17 @@ class MainScreen extends StatelessWidget {
             CustomButton(
               width: width,
               height: height,
-              days: "DailyChallengeScreen",
+              days: 'DailyChallengeScreen',
               onPressede: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DailyChallengeScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, 'DailyChallengeScreen');
               },
             ),
             CustomButton(
               width: width,
               height: height,
-              days: "LearningDemoScreen",
+              days: 'LearningDemoScreen',
               onPressede: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LearningDemoScreen()),
-                );
+                Navigator.pushNamed(context, 'LearningDemoScreen');
               },
             ),
           ],
