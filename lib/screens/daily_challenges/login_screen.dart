@@ -5,6 +5,14 @@ import 'package:my_app/custom_widgets/custom_button.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
+  /*
+  Day 8 Challenge (02/07/25): Login Screen UI
+
+  Design a login screen with:
+  - Two TextFields for email and password
+  - A Login button
+  - Add placeholder/hint text inside the fields
+*/
 
   @override
   Widget build(BuildContext context) {

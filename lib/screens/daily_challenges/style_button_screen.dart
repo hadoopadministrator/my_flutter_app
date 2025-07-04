@@ -7,6 +7,13 @@ import 'package:my_app/custom_widgets/custom_floating_action_button.dart';
 
 class StyleButtonScreen extends StatelessWidget {
   const StyleButtonScreen({super.key});
+  /*
+  Day 9 Challenge (03/07/25): Styled Buttons
+
+  Add multiple buttons:
+  - ElevatedButton, OutlinedButton, and TextButton
+  - Customize each with padding, rounded corners, and color
+*/
 
   @override
   Widget build(BuildContext context) {

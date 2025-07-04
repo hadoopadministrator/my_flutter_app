@@ -22,98 +22,110 @@ class DailyChallengeScreen extends StatelessWidget {
         title: "DailyChallengeScreen",
         fontSize: width * 0.05,
       ),
-      body: ListView(
-        padding: EdgeInsets.all(16),
-        children: [
-          CustomButton(
-            days: "Day1 Challenge",
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 8),
+        child: Column(
+          children: [
+            CustomButton(
+              days: "Day1 Challenge",
 
-            onPressede: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => BasicContainerScreen()),
-              );
-            },
-          ),
-          CustomButton(
-            days: "Day2 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BasicContainerScreen(),
+                  ),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day2 Challenge",
 
-            onPressede: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => VerticalBoxScreen()),
-              );
-            },
-          ),
-          CustomButton(
-            days: "Day3 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => VerticalBoxScreen()),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day3 Challenge",
 
-            onPressede: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HorizontalIconScreen()),
-              );
-            },
-          ),
-          CustomButton(
-            days: "Day4 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HorizontalIconScreen(),
+                  ),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day4 Challenge",
 
-            onPressede: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => StyledTextScreen()),
-              );
-            },
-          ),
-          CustomButton(
-            days: "Day5 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StyledTextScreen()),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day5 Challenge",
 
-            onPressede: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => AlignedContainerScreen(),
-                ),
-              );
-            },
-          ),
-          CustomButton(
-            days: "Day6 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AlignedContainerScreen(),
+                  ),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day6 Challenge",
 
-            onPressede: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ProfileCardScreen()),
-              );
-            },
-          ),
-          CustomButton(
-            days: "Day7 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfileCardScreen()),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day7 Challenge",
 
-            onPressede: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => BusinessCardScreen()),
-              );
-            },
-          ),
-          CustomButton(
-            days: "Day8 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BusinessCardScreen()),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day8 Challenge",
 
-            onPressede: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => LoginScreen()),
-              );
-            },
-          ),
-          CustomButton(
-            days: "Day9 Challenge",
-            onPressede: () {
-              Navigator.pushNamed(context, 'StyleButtonScreen');
-            },
-          ),
-        ],
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day9 Challenge",
+              onPressede: () {
+                Navigator.pushNamed(context, 'StyleButtonScreen');
+              },
+            ),
+            CustomButton(
+              days: "Day10 Challenge",
+              onPressede: () {
+                Navigator.pushNamed(context, 'SignUpScreen');
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
