@@ -124,6 +124,18 @@ class DailyChallengeScreen extends StatelessWidget {
                 Navigator.pushNamed(context, 'SignUpScreen');
               },
             ),
+            CustomButton(
+              days: "Day11 Challenge",
+              onPressede: () {
+                Navigator.pushNamed(context, 'HomePage');
+              },
+            ),
+            CustomButton(
+              days: "Day12 Challenge",
+              onPressede: () {
+                Navigator.pushNamed(context, 'UpdateProfileForm');
+              },
+            ),
           ],
         ),
       ),

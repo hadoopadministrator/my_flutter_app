@@ -16,10 +16,7 @@ class ProfileCardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
     return Scaffold(
-      appBar: CustomAppBar(
-        title: "Day 6 - Profile Card",
-        fontSize: width * 0.05,
-      ),
+      appBar: CustomAppBar(title: "Day 6 - Profile Card"),
       body: SafeArea(
         child: Center(
           child: Container(
