@@ -10,9 +10,10 @@ class UpdateProfileForm extends StatefulWidget {
 }
 
 class _UpdateProfileFormState extends State<UpdateProfileForm> {
-  String selectedValue = '';
+  String selectedValue = 'Select Gender';
+  bool isChecked = false;
   DateTime? selectedDate;
-
+  TextEditingController nameController = TextEditingController();
   void _selectDate() async {
     final DateTime date = DateTime.now();
 
@@ -45,10 +46,15 @@ class _UpdateProfileFormState extends State<UpdateProfileForm> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(height: 16),
               TextFormField(
+                maxLines: 1,
+                maxLength: 30,
+                controller: nameController,
                 decoration: const InputDecoration(
                   labelText: 'Full Name',
                   border: OutlineInputBorder(),
@@ -56,16 +62,25 @@ class _UpdateProfileFormState extends State<UpdateProfileForm> {
                 ),
               ),
               const SizedBox(height: 16),
-              DropdownButton(
-                dropdownColor: Colors.amber,
+              DropdownButtonFormField(
+                decoration: const InputDecoration(border: OutlineInputBorder()),
+                elevation: 1,
                 borderRadius: BorderRadius.circular(16),
-                isExpanded: true,
-                padding: EdgeInsets.all(8),
+                padding: EdgeInsets.all(2),
                 value: selectedValue,
-                items: ['', 'Male', 'Female', 'Other'].map((value) {
+                items: ['Select Gender', 'Male', 'Female', 'Other'].map((
+                  value,
+                ) {
                   return DropdownMenuItem<String>(
                     value: value,
-                    child: Text(value),
+                    child: Text(
+                      value,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                        fontSize: 18,
+                      ),
+                    ),
                   );
                 }).toList(),
                 onChanged: (newValue) {
@@ -74,7 +89,7 @@ class _UpdateProfileFormState extends State<UpdateProfileForm> {
                   });
                 },
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 24),
               InkWell(
                 onTap: () => _selectDate(),
                 child: Container(
@@ -98,7 +113,27 @@ class _UpdateProfileFormState extends State<UpdateProfileForm> {
                 ),
               ),
               const SizedBox(height: 16),
-              CustomButton(days: 'Submit', onPressede: () {}),
+
+              CustomButton(
+                days: isChecked ? 'Update Profile' : 'Submit',
+                onPressede: () {
+                  if (nameController.text.trim().isNotEmpty &&
+                      selectedValue != 'Select Gender' &&
+                      selectedDate != null) {
+                    // debugPrint(
+                    //   '$selectedValue ${nameController.text}  ${selectedDate.toString()}',
+                    // );
+                    isChecked = true;
+                  } else {
+                    // debugPrint('object');
+                    isChecked = false;
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Please fill all fields')),
+                    );
+                  }
+                  setState(() {});
+                },
+              ),
             ],
           ),
         ),
