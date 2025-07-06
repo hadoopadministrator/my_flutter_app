@@ -113,6 +113,17 @@ class _UpdateProfileFormState extends State<UpdateProfileForm> {
                 ),
               ),
               const SizedBox(height: 16),
+              if (isChecked) ...{
+                Text(
+                  ''' Name: ${nameController.text} \nGender: ${selectedValue.toString()} \nDOB: ${selectedDate.toString().split(' ')[0]} ''',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(height: 16),
+              },
 
               CustomButton(
                 days: isChecked ? 'Update Profile' : 'Submit',
