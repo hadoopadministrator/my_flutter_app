@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:my_app/screens/daily_challenges/aligned_container_screen.dart';
 import 'package:my_app/screens/daily_challenges/basic_container_screen.dart';
 import 'package:my_app/screens/daily_challenges/business_card_screen.dart';
+import 'package:my_app/screens/daily_challenges/feedback_screen.dart';
 import 'package:my_app/screens/daily_challenges/horizontal_icon_screen.dart';
 import 'package:my_app/screens/daily_challenges/login_screen.dart';
 import 'package:my_app/screens/daily_challenges/profile_card_screen.dart';
+import 'package:my_app/screens/daily_challenges/scrollable_list_view_screen.dart';
 import 'package:my_app/screens/daily_challenges/styled_text_screen.dart';
 import 'package:my_app/screens/daily_challenges/vertical_box_screen.dart';
 
@@ -134,6 +136,26 @@ class DailyChallengeScreen extends StatelessWidget {
               days: "Day12 Challenge",
               onPressede: () {
                 Navigator.pushNamed(context, 'UpdateProfileForm');
+              },
+            ),
+            CustomButton(
+              days: "Day13 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ScrollableListViewScreen(),
+                  ),
+                );
+              },
+            ),
+            CustomButton(
+              days: "Day14 Challenge",
+              onPressede: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FeedbackScreen()),
+                );
               },
             ),
           ],
